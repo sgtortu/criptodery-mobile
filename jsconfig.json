@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "jsx": "react",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "_assets": ["./assets/*"],
+      "_assets": ["src/assets/*"],
       // "_components": ["src/components/*"],
       // "_animations": ["src/components/animations/*"],
       // "_atoms": ["src/components/atoms/*"],
@@ -14,13 +12,10 @@
       // "_screens": ["src/screens/*"],
       // "_services": ["src/services/*"],
       // "_styles": ["src/styles/*"],
-      "_redux": ["./redux/*"],
-      "_utils": ["./utils/*"],
-      "_constants/*": ["./utils/constants/*"],
-      "_hooks/*": ["./utils/hooks/*"]
+      "_redux": ["src/redux/*"],
+      "_utils": ["src/utils/*"],
+      "_constants": ["src/utils/constants/*"],
+      "_hooks": ["src/utils/hooks/*"]
     }
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts"],
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  }
 }

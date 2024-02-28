@@ -1,15 +1,22 @@
-const path = require('path');
-
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: [
+{
+  "plugins": [
     [
-      require.resolve('babel-plugin-module-resolver'),
+      "module-resolver",
       {
-        cwd: 'babelrc',
-        extensions: ['.ts', '.tsx', '.js', '.ios.js', '.android.js'],
-        alias: {
-          '_assets': './src/assets',
+        "cwd": "babelrc",
+        "root": ["."],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".android.js",
+          ".android.tsx",
+          ".ios.js",
+          ".ios.tsx"
+        ],
+        "alias": {
+          "_assets": "./src/assets",
           // "_components": "./src/components",
           // "_animations": "./src/components/animations",
           // "_atoms": "./src/components/atoms",
@@ -22,12 +29,13 @@ module.exports = {
           // "_store": "./src/services/store",
           // "_api": "./src/services/api",
           // "_styles": "./src/styles",
-          '_redux': './src/redux',
-          '_utils': './src/utils',
-          '_constants': './src/utils/constants',
-          '_hooks': './src/utils/hooks',
-        },
-      },
-    ],
+          "_redux": "./src/redux",
+          "_utils": "./src/utils",
+          "_constants": "./src/utils/constants",
+          "_hooks": "./src/utils/hooks"
+        }
+      }
+    ]
   ],
-};
+  "presets": ["module:metro-react-native-babel-preset"]
+}

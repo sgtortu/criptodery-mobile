@@ -1,15 +1,14 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {
-  MY_BLOCKS_SCREEN,
-  PROFILE_SCREEN,
-  SUGGESTED_BLOCKS_SCREEN,
-  HOME_SCREEN,
-} from '../../constants/screens';
+import {SCREEN} from '_constants';
 import ProfileScreen from '../../screens/ProfileScreen';
 import HomeScreen from '../../screens/HomeScreen';
 import SuggestedBlocksScreen from '../../screens/SuggestedBlocksScreen';
 import MyBlocksScreen from '../../screens/MyBlocksScreen';
+
+const {MY_BLOCKS_SCREEN, PROFILE_SCREEN, SUGGESTED_BLOCKS_SCREEN, HOME_SCREEN} =
+  SCREEN;
+
 export type RootStackParamList = {
   [MY_BLOCKS_SCREEN]: undefined;
   [HOME_SCREEN]: undefined;

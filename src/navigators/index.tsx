@@ -1,21 +1,23 @@
 import React from 'react';
-import {AUTH_STACK, APP_STACK} from '@app/constants/screens';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {RootState} from '@app/redux';
-import {useSelector} from 'react-redux';
+import { SCREEN } from '_constants';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { RootState } from '_redux';
+import { useSelector } from 'react-redux';
 import AuthStack from './AuthStack';
 import AppStack from './AppStack';
 
 const Stack = createNativeStackNavigator();
 
+const { AUTH_STACK, APP_STACK } = SCREEN;
+
 const Navigation = () => {
-  const {token} = useSelector((store: RootState) => store.user);
+  const { token } = useSelector((store: RootState) => store.user);
   let isGuest = true;
-  console.log('isGuest----->', isGuest)
+  console.log('isGuest----->', isGuest);
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         {token || isGuest ? (
           <Stack.Screen name={APP_STACK} component={AppStack} />
         ) : (
