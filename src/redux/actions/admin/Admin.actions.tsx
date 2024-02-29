@@ -1,6 +1,6 @@
-import * as types from '../../types/user';
+import AdminTypes from '../../types/admin';
 
 export const setToken = (token: string) => ({
-  type: types.SET_TOKEN,
+  type: AdminTypes.SET_TOKEN,
   payload: token,
 });

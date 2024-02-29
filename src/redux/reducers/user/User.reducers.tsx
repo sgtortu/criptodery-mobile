@@ -1,4 +1,6 @@
-import { SET_TOKEN } from '../../types/user';
+import UserTypes from '../../types/user/';
+
+const { SET_TOKEN } = UserTypes;
 
 // Define the state interface
 export interface IUserState {

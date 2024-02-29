@@ -1,19 +1,26 @@
 import React from 'react';
-import { SCREEN } from '@constants/index';
+import { useSelector } from 'react-redux';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { RootState } from '@redux';
-import { useSelector } from 'react-redux';
+
+//* Stacks
 import AuthStack from './AuthStack';
 import AppStack from './AppStack';
+
+//* Utils
+import { SCREEN } from '_utils/constants';
+import { RootState } from '_redux/reducers';
 
 const Stack = createNativeStackNavigator();
 
 const { AUTH_STACK, APP_STACK } = SCREEN;
 
 const Navigation = () => {
-  const { token } = useSelector((store: RootState) => store.user);
-  let isGuest = true;
+  const {
+    UserReducers: { token },
+  } = useSelector((store: RootState) => store);
+
+  const isGuest = true;
   console.log('isGuest----->', isGuest);
   return (
     <NavigationContainer>

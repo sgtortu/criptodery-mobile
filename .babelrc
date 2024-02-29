@@ -24,7 +24,7 @@
           // "_organisms": "./src/components/organisms",
           // "_specials": "./src/components/specials",
           // "_navigations": "./src/navigations",
-          // "_screens": "./src/screens",
+          "_screens": "./src/screens",
           // "_services": "./src/services",
           // "_store": "./src/services/store",
           // "_api": "./src/services/api",

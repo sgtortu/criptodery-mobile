@@ -11,7 +11,7 @@
       "_molecules/*": ["src/components/molecules/*"],
       // "_organisms/*": ["components/organisms/*"],
       // "_navigations/*": ["navigations/*"],
-      // "_screens/*": ["screens/*"],
+      "_screens/*": ["src/screens/*"],
       // "_services/*": ["services/*"],
       // "_styles/*": ["styles/*"],
       "_redux/*": ["src/redux/*"],

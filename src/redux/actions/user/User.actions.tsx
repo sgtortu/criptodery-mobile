@@ -1,6 +1,6 @@
-import * as types from '../../types/user';
+import UserTypes from '../../types/user';
 
 export const setToken = (token: string) => ({
-  type: types.SET_TOKEN,
+  type: UserTypes.SET_TOKEN,
   payload: token,
 });

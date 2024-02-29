@@ -1,4 +1,4 @@
-import strings from '@app/locale';
+import strings from '_utils/constants/locale';
 
 interface IIndexable {
   [key: string]: any;
