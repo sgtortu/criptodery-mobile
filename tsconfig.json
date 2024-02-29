@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "jsx": "react",
-    "baseUrl": "./src",
+    // "moduleResolution": "node",
+    // "jsx": "react",
+    "baseUrl": "./",
     "paths": {
-      "_assets": ["./assets/*"],
-      // "_components": ["src/components/*"],
-      // "_animations": ["src/components/animations/*"],
-      // "_atoms": ["src/components/atoms/*"],
-      // "_molecules": ["src/components/molecules/*"],
-      // "_organisms": ["src/components/organisms/*"],
-      // "_navigations": ["src/navigations/*"],
-      // "_screens": ["src/screens/*"],
-      // "_services": ["src/services/*"],
-      // "_styles": ["src/styles/*"],
-      "_redux": ["./redux/*"],
-      "_utils": ["./utils/*"],
-      "_constants/*": ["./utils/constants/*"],
-      "_hooks/*": ["./utils/hooks/*"]
-    }
+      "_assets/*": ["src/assets/*"],
+      "_components/*": ["src/components/*"],
+      // "_animations/*": ["components/animations/*"],
+      "_atoms/*": ["src/components/atoms/*"],
+      "_molecules/*": ["src/components/molecules/*"],
+      // "_organisms/*": ["components/organisms/*"],
+      // "_navigations/*": ["navigations/*"],
+      // "_screens/*": ["screens/*"],
+      // "_services/*": ["services/*"],
+      // "_styles/*": ["styles/*"],
+      "_redux/*": ["src/redux/*"],
+      "_utils/*": ["src/utils/*"]
+    },
+    "esModuleInterop": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts"],
+  // "include": ["src/**/*"],
+  // "exclude": ["node_modules", "src/**/*.spec.ts"],
   "extends": "@tsconfig/react-native/tsconfig.json"
 }

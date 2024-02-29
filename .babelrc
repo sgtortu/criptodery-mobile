@@ -4,7 +4,7 @@
       "module-resolver",
       {
         "cwd": "babelrc",
-        "root": ["."],
+        "root": ["./"],
         "extensions": [
           ".js",
           ".jsx",
@@ -17,10 +17,10 @@
         ],
         "alias": {
           "_assets": "./src/assets",
-          // "_components": "./src/components",
+          "_components": "./src/components",
           // "_animations": "./src/components/animations",
-          // "_atoms": "./src/components/atoms",
-          // "_molecules": "./src/components/molecules",
+          "_atoms": "./src/components/atoms",
+          "_molecules": "./src/components/molecules",
           // "_organisms": "./src/components/organisms",
           // "_specials": "./src/components/specials",
           // "_navigations": "./src/navigations",
@@ -30,9 +30,7 @@
           // "_api": "./src/services/api",
           // "_styles": "./src/styles",
           "_redux": "./src/redux",
-          "_utils": "./src/utils",
-          "_constants": "./src/utils/constants",
-          "_hooks": "./src/utils/hooks"
+          "_utils": "./src/utils"
         }
       }
     ]

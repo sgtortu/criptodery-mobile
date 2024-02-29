@@ -1,4 +1,3 @@
-//@ts-ignore
 import strings from '@app/locale';
 
 interface IIndexable {
@@ -10,19 +9,9 @@ interface ILocalizer {
   setCurrentLanguageCode(language: string): void;
 }
 
-const useLocalizer = (...scopes: string[]): ILocalizer => {
-  return {
-    t: (key: string, scope: string | null = null) =>
-      !scope ? translate(scopes, key) : translateScoped(key, scope),
-    getCurrentLanguageCode,
-    setCurrentLanguageCode,
-    /* more logic here, ex: updateLanguage() */
-  };
-};
-
 /* Returns the first string that matches with key in selected scopes */
 export const translate = (scopes: string[], key: string): string => {
-  var result =
+  const result =
     scopes
       .map(scope => {
         return (strings as IIndexable)[scope];
@@ -41,5 +30,15 @@ export const getCurrentLanguageCode = () => strings.getLanguage();
 
 export const setCurrentLanguageCode = (language: string) =>
   strings.setLanguage(language);
+
+const useLocalizer = (...scopes: string[]): ILocalizer => {
+  return {
+    t: (key: string, scope: string | null = null) =>
+      !scope ? translate(scopes, key) : translateScoped(key, scope),
+    getCurrentLanguageCode,
+    setCurrentLanguageCode,
+    /* more logic here, ex: updateLanguage() */
+  };
+};
 
 export default useLocalizer;

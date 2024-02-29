@@ -5,7 +5,5 @@ export const SUGGESTED_BLOCKS_SCREEN = 'SUGGESTED_BLOCKS_SCREEN';
 export const MY_BLOCKS_SCREEN = 'MY_BLOCKS_SCREEN';
 export const PROFILE_SCREEN = 'PROFILE_SCREEN';
 
-
 export const APP_STACK = 'APP_STACK';
 export const AUTH_STACK = 'AUTH_STACK';
- 

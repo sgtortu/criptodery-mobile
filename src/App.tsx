@@ -1,14 +1,16 @@
 import React from 'react';
-import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/integration/react';
-import {store, persistor} from './redux';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { ReduxStore } from '_redux/store';
 import Navigation from './navigators';
-import {config} from '@gluestack-ui/config';
-import {GluestackUIProvider, Box} from '@gluestack-ui/themed';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+import { config } from '@gluestack-ui/config';
+import { GluestackUIProvider, Box } from '@gluestack-ui/themed';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { SafeAreaView, StatusBar, useColorScheme } from 'react-native';
 
 const App = () => {
+  const { store, persistor } = ReduxStore;
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

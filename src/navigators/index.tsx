@@ -1,8 +1,8 @@
 import React from 'react';
-import { SCREEN } from '_constants';
+import { SCREEN } from '@constants/index';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { RootState } from '_redux';
+import { RootState } from '@redux';
 import { useSelector } from 'react-redux';
 import AuthStack from './AuthStack';
 import AppStack from './AppStack';
