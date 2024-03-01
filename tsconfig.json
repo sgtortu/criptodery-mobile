@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    // "jsx": "react",
+    "jsx": "react",
     "baseUrl": "./",
     "paths": {
       "_assets/*": ["src/assets/*"],
