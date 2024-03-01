@@ -1,4 +1,4 @@
-import UserTypes from '../../types/user/';
+import UserTypes from '_redux/types/user/';
 
 const { SET_TOKEN } = UserTypes;
 

@@ -1,4 +1,4 @@
-import AdminTypes from '../../types/admin';
+import AdminTypes from '_redux/types/admin';
 
 const { SET_TOKEN } = AdminTypes;
 

@@ -14,6 +14,7 @@ export const loginUser = async (email: string, password: string) => {
     throw error;
   }
 };
+
 export const logout = async () => {
   try {
     const result = await directus.logout();

@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
-    // "moduleResolution": "node",
+    "moduleResolution": "node",
     // "jsx": "react",
     "baseUrl": "./",
     "paths": {
       "_assets/*": ["src/assets/*"],
       "_components/*": ["src/components/*"],
-      // "_animations/*": ["components/animations/*"],
+      "_animations/*": ["src/components/animations/*"],
       "_atoms/*": ["src/components/atoms/*"],
       "_molecules/*": ["src/components/molecules/*"],
-      // "_organisms/*": ["components/organisms/*"],
+      "_organisms/*": ["src/components/organisms/*"],
+      "_specials/*": ["src/components/specials/*"],
       // "_navigations/*": ["navigations/*"],
       "_screens/*": ["src/screens/*"],
-      // "_services/*": ["services/*"],
+      "_services/*": ["src/services/*"],
       // "_styles/*": ["styles/*"],
       "_redux/*": ["src/redux/*"],
       "_utils/*": ["src/utils/*"]
@@ -20,6 +21,6 @@
     "esModuleInterop": true
   },
   "include": ["src/**/*"],
-  // "exclude": ["node_modules", "src/**/*.spec.ts"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"],
   "extends": "@tsconfig/react-native/tsconfig.json"
 }

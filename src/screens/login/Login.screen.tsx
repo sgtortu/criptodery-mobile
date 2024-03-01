@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
 import { Box, Button, Input, InputField, Text } from '@gluestack-ui/themed';
-import { loginUser } from '../../services/user/User.service';
 import { useDispatch } from 'react-redux';
 import { UserActions } from '_redux/actions';
 
+//* Services
+import UserService from '_services/user';
+
 const LoginScreen = () => {
+  // Utils
+  const { loginUser } = UserService;
+  const dispatch = useDispatch();
+
+  // Local state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
+
+  // Function to handle login of user
   const handleLogin = async () => {
     try {
       const response = await loginUser(email, password);
-      if (response.access_token) {
+      if (response && response.access_token) {
+        const { access_token } = response;
         const { setToken } = UserActions;
-        dispatch(setToken(response.access_token));
+        dispatch(setToken(access_token));
       }
     } catch (error) {
       /* */
     }
   };
+
   return (
     <Box>
       <Text>LoginScreen</Text>

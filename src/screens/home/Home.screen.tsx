@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { genericGet } from '../../services/generic/Generic.service';
 import { Box, Text } from '@gluestack-ui/themed';
 
+//* Services
+import GenericService from '_services/generic/';
+
 const HomeScreen = () => {
+  // Local state
   const [blocks, setBlocks] = useState<any[]>([]);
 
   const getTenders = async () => {
+    const { genericGet } = GenericService;
     try {
       const response: any = await genericGet('blocks');
       if (response) {
